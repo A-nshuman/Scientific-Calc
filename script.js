@@ -13,6 +13,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const period = document.getElementById('period');
     const plusMinus = document.getElementById('plus-minus');
     const backspace = document.getElementById('backSpace');
+    
+    // scientific buttons
+    const eBtn = document.getElementById('e');
+    const fact = document.getElementById('fact');
+    const sinBtn = document.getElementById('sin');
+    const cosBtn = document.getElementById('cos');
+    const tanBtn = document.getElementById('tan');
+    const asinBtn = document.getElementById('asin');
+    const acosBtn = document.getElementById('acos');
+    const atanBtn = document.getElementById('atan');
+    const sqrtBtn = document.getElementById('sqrt');
+    const piBtn = document.getElementById('pi');
+    const logBtn = document.getElementById('log');
+    const squareBtn = document.getElementById('square');
+    const powerBtn = document.getElementById('power');
+    const radBtn = document.getElementById('rad');
+    const degBtn = document.getElementById('deg');
 
     // Functions
     function mulDiv(oldChar, newChar, event) {
@@ -38,6 +55,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const factorial = (n) => {
+        if (n === 0) {
+            return 1;
+        }
+        return n * factorial(n - 1);
+    }
+
     if (parseInt(display.style.width) > 210) {
         display.overflow = 'scroll';
     }
@@ -53,6 +77,66 @@ document.addEventListener('DOMContentLoaded', () => {
 
     backspace.addEventListener('click', () => {
         display.innerHTML = display.innerHTML.slice(0, -1);
+    });
+    
+    eBtn.addEventListener('click', () => {
+        display.innerHTML = Math.E;
+    });
+
+    fact.addEventListener('click', () => {
+        display.innerHTML = factorial(parseInt(display.innerHTML));
+    });
+
+    sinBtn.addEventListener('click', () => {
+        display.innerHTML = Math.sin(eval(display.innerHTML));
+    });
+
+    cosBtn.addEventListener('click', () => {
+        display.innerHTML = Math.cos(eval(display.innerHTML));
+    });
+
+    tanBtn.addEventListener('click', () => {
+        display.innerHTML = Math.tan(eval(display.innerHTML));
+    });
+
+    asinBtn.addEventListener('click', () => {
+        display.innerHTML = Math.asin(eval(display.innerHTML));
+    });
+
+    acosBtn.addEventListener('click', () => {
+        display.innerHTML = Math.acos(eval(display.innerHTML));
+    });
+
+    atanBtn.addEventListener('click', () => {
+        display.innerHTML = Math.atan(eval(display.innerHTML));
+    });
+
+    sqrtBtn.addEventListener('click', () => {
+        display.innerHTML = Math.sqrt(eval(display.innerHTML));
+    });
+
+    piBtn.addEventListener('click', () => {
+        display.innerHTML = Math.PI;
+    });
+
+    logBtn.addEventListener('click', () => {
+        display.innerHTML = Math.log10(eval(display.innerHTML));
+    });
+
+    squareBtn.addEventListener('click', () => {
+        display.innerHTML = Math.pow(eval(display.innerHTML), 2);
+    });
+
+    powerBtn.addEventListener('click', () => {
+        display.innerHTML = Math.pow(eval(display.innerHTML), eval(prompt('Enter the power:')));
+    });
+
+    radBtn.addEventListener('click', () => {
+        display.innerHTML = eval(display.innerHTML) * (Math.PI / 180);
+    });
+
+    degBtn.addEventListener('click', () => {
+        display.innerHTML = eval(display.innerHTML) * (180 / Math.PI);
     });
 
     period.addEventListener('click', () => {
@@ -208,6 +292,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 } while (numEnd === true)
             }
             buttonPress(period);
+        }
+
+        else if (event.key === 'e') {
+            display.innerHTML = eval(display.innerHTML * 2.71);
+            buttonPress(eBtn);
         }
     });
 });

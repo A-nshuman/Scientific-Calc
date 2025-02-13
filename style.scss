@@ -1,0 +1,215 @@
+html {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    // background: url(https://anshumans-portfolio.netlify.app/PG/yellow%20flower.jpg);
+    // background-position: center;
+    // background-size: cover;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+
+    // h1{
+    //     font-size: 40px;
+    //     color: whitesmoke;
+    //     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    // }
+
+    .calcBody {
+        background-color: #f5f5f5;
+        backdrop-filter: blur(10px);
+        box-shadow: inset -3px -3px 15px #f5f5f5, 3px 3px 15px #bbc3cc;
+        padding: 20px;
+        border-radius: 10px;
+        width: 230px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        // border: 5px solid #E5E4E2;
+        filter: drop-shadow(-10px -10px 50px #E5E4E2);
+        // filter: drop-shadow(10px 10px 10px #E5E4E2);
+
+        .screen {
+            border-radius: 10px;
+            width: calc(100%);
+            height: 120px;
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            overflow: hidden;
+            margin-block-end: 10px;
+            box-shadow: inset -3px -3px 15px #f5f5f5, inset 3px 3px 15px #bbc3cc;
+
+            .screenDisp {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                margin-right: 10px;
+
+                // &::before {
+                //     content: "";
+                //     position: absolute;
+                //     background-color: transparent;
+                //     bottom: 345px;
+                //     height: 50px;
+                //     width: 230px;
+                //     border-radius: 100% 100% 0 0;
+                //     box-shadow: 0 -25px 0 0 #f5f5f5;
+                //     // box-shadow: inset -3px -3px 15px #f5f5f5, inset 3px 3px 15px #bbc3cc;
+                // }
+            }
+
+            #backSpace {
+                color: crimson;
+                font-weight: 100;
+                font-size: 20px;
+            }
+
+            #longBtn {
+                width: calc(100% - 100px);
+                border-radius: 10px;
+            }
+
+            .screenIcons {
+                width: calc(100% - 20px);
+                border-radius: 100% 100% 10px 10px;
+                overflow: hidden;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                // padding-bottom: 10px;
+                padding: 10px;
+                background-color: #f5f5f5a2;
+                box-shadow: inset -3px -3px 15px #f5f5f5, inset 3px 3px 15px #bbc3cc;
+                background-blend-mode: color-burn;
+                // animation: rgbAnim 10s infinite alternate;
+
+                @keyframes rgbAnim {
+                    0% {
+                        background-color: hsl(197, 97%, 66%, 1);
+                    }
+
+                    25% {
+                        background-color: hsl(114, 100%, 65%);
+                    }
+
+                    50% {
+                        background-color: hsl(348, 83%, 81%, 1);
+                    }
+
+                    75% {
+                        background-color: hsl(.75turn, 90%, 65%);
+                    }
+
+                    100% {
+                        background-color: hsl(1turn, 90%, 65%);
+                    }
+                }
+
+                button {
+                    border-radius: 10px;
+                    font-size: 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: none;
+                    width: 30px;
+                    height: 30px;
+                    background-color: #f5f5f5a2;
+                    box-shadow: -3px -3px 15px #f5f5f5, 3px 3px 15px #bbc3cc;
+                    transition: all 0.2s ease-in-out;
+
+                    &:hover {
+                        scale: 1.1;
+                    }
+                }
+            }
+        }
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .row1 {
+            position: absolute;
+            top: 90px;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+
+            #longBtn {
+                width: 115px;
+                border-radius: 10px;
+            }
+
+            .btn {
+                width: 50px;
+                height: 50px;
+                border: none;
+                background-color: #f5f5f5a2;
+                border-radius: 10px;
+                font-weight: 900;
+                font-size: 18px;
+                color: #708090;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: inset -3px -3px 7px #f5f5f5, 3px 3px 7px #bbc3cc;
+                // box-shadow: -3px -3px 7px #f5f5f5, 3px 3px 7px #bbc3cc;
+                // box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.5), 3px 3px 7px rgba(0, 0, 0, 0.5);
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    box-shadow: -3px -3px 7px #f5f5f5, inset 3px 3px 7px #bbc3cc;
+                    // box-shadow: inset -3px -3px 7px #f5f5f5, inset 3px 3px 7px #bbc3cc;
+                    background-color: #E5E4E2;
+                    scale: 0.95;
+
+                    @keyframes buttonPress {
+                        0% {
+                            transform: scale(1);
+                        }
+
+                        50% {
+                            transform: scale(0.9);
+                            // filter: drop-shadow(0 0 0 rgb(225, 119, 34));
+                            background-color: rgba($color: #E5E4E2, $alpha: 0.5);
+                            box-shadow: 0 0 1px #E5E4E2, inset 0 0 10px #E5E4E2;
+                        }
+
+                        100% {
+                            transform: scale(1);
+                        }
+                    }
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
